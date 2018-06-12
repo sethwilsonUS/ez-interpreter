@@ -1,0 +1,25 @@
+proc alpha
+echo starting alpha
+copy X X+Y
+stop
+proc beta
+echo starting beta
+copy Y Y*2
+call alpha
+copy Z Z+X
+stop
+proc gamma
+echo starting gamma
+copy Z Z+1
+call beta
+stop
+proc main
+copy X 1+2*3+4
+copy Y 1+1
+copy Z X*Y
+echo the value of z starts at Z.
+call alpha
+call beta
+call gamma
+echo x is X and y is Y and z is Z.
+stop
