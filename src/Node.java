@@ -13,7 +13,7 @@
  *
  * @param <T>       an Object type determining the kind of data stored in the Node.
  */
-public class Node<T> {
+class Node<T> {
 	
 	// Declare the object item and the next Node pointer.
 	private T item;
@@ -24,7 +24,7 @@ public class Node<T> {
 	 *
 	 * @param x     an Object corresponding to the Node's type
 	 */
-	public Node(T x)
+	Node(T x)
 	{
 		
 		// Set the passed Object parameter as the node's content.
@@ -39,7 +39,7 @@ public class Node<T> {
 	 *
 	 * @return      an Object of type T
 	 */
-	public T getItem() { return item; }
+	T getItem() { return this.item; }
 	
 	// No need for setItem() in this implementation.
 	
@@ -48,9 +48,9 @@ public class Node<T> {
 	 *
 	 * @return      the next Node<T> object in a list.
 	 */
-	public Node<T> getNext()
+	Node<T> getNext()
 	{
-		return next;
+		return this.next;
 	}
 	
 	/**
@@ -58,5 +58,5 @@ public class Node<T> {
 	 *
 	 * @param n     a Node of type T to serve as this Node's next
 	 */
-	public void setNext(Node<T> n) { next = n; }
+	void setNext(Node<T> n) { this.next = n; }
 }

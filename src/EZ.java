@@ -14,6 +14,8 @@
  */
 
 // Import classes for file input/output.
+import org.jetbrains.annotations.NotNull;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -99,7 +101,7 @@ public class EZ {
 	/**
 	 * A simple method to run the EZ program.
 	 */
-	public void run() {
+	void run() {
 		
 		// Since all EZ programs start with the "main" procedure, we just need to call it.
 		call("main");
@@ -340,7 +342,7 @@ public class EZ {
 		 *
 		 * @param s     a String containing a line of EZ code
 		 */
-		public void addLine(String s) {
+		void addLine(@NotNull String s) {
 			
 			// Add the command followed by a new line character, used to distinguish lines during EZ's call method.
 			proc = proc + s + "\n";
@@ -351,7 +353,7 @@ public class EZ {
 		 *
 		 * @return      the procedure's name as a String
 		 */
-		public String getName() { return name; }
+		String getName() { return name; }
 		
 		/**
 		 * Separates the procedure's single String into a String array, providing individual lines of code to EZ's call
@@ -359,7 +361,7 @@ public class EZ {
 		 *
 		 * @return      a String array containing individual lines of EZ code
 		 */
-		public String[] getLines() { return proc.split("\n"); }
+		String[] getLines() { return proc.split("\n"); }
 	}
 	
 	/**
@@ -382,7 +384,7 @@ public class EZ {
 		 *
 		 * @param p     a Proc object passed in from EZ's parse method..
 		 */
-		public void addProc(Proc p) {
+		void addProc(Proc p) {
 			
 			// Declare and initialize a new Node; the Node's Proc is initialized by parse with the appropriate name.
 			Node<Proc> newProc = new Node<>(p);
@@ -406,7 +408,7 @@ public class EZ {
 		 * @param s     a String containing the name of a procedure
 		 * @return      the Proc object with the corresponding name
 		 */
-		public Proc getProc(String s) {
+		Proc getProc(String s) {
 			
 			// Declare the Proc to be returned and initialize it to null.
 			Proc proc = null;

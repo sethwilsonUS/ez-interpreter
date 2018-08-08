@@ -13,7 +13,7 @@
  *
  * @param <T>       an Object type determining the kind of data stored in the Stack.
  */
-public class Stack<T> {
+class Stack<T> {
 	
 	// Declare a Node of type T pointing to the top of the Stack.
 	private Node<T> top;
@@ -21,7 +21,7 @@ public class Stack<T> {
 	/**
 	 * Stack constructor setting top to null.
 	 */
-	public Stack() {
+	Stack() {
 		top = null;
 	}
 	
@@ -30,7 +30,7 @@ public class Stack<T> {
 	 *
 	 * @return      a boolean, true if the Stack is empty, false if not
 	 */
-	public boolean isEmpty() {
+	boolean isEmpty() {
 		return (top == null);
 	}
 	
@@ -39,7 +39,7 @@ public class Stack<T> {
 	 *
 	 * @param x     an Object of type T to be added to the top of the Stack
 	 */
-	public void push(T x) {
+	void push(T x) {
 		
 		// Declare a new Node to be pushed onto the Stack; initialize the Node with the Object to be added.
 		Node<T> pushedNode = new Node<>(x);
@@ -56,7 +56,7 @@ public class Stack<T> {
 	 *
 	 * @return      an Object of type T--the contents of the popped Node from the Stack
 	 */
-	public T pop() {
+	T pop() {
 		
 		// Declare a variable to hold the popped Object; initialize it to null.
 		T poppedItem = null;
@@ -79,7 +79,7 @@ public class Stack<T> {
 	 *
 	 * @return      an Object of type T found at the top of the Stack
 	 */
-	public T peek() {
+	T peek() {
 		
 		// Declare the Object to be returned; initialize it to null.
 		T peekedItem = null;
